@@ -1,0 +1,15 @@
+<h1>
+  hahahahahaha
+</h1>
+
+<% @posts.each do |post| %>
+  <div style="width: 300px; height: 200px; border: red 1px solid;text-align: center;">
+    
+    <% if user_signed_in? %>
+      <p><b><%= post.user.email %></b></p><br />
+    <% else %>
+      <p><b>some mysterious pal</b></p><br />
+    <% end %>
+      <p><%= post.content %></p>
+  </div>
+<% end %>
